@@ -240,7 +240,7 @@ export default function SettingsTabScreen() {
               }}
             />
           </Row>
-          <Text text={`Version: ${versionInfo.currentVesion}`} preset="sub" textCenter />
+          <Text text={`Version: ${versionInfo.currentVesion} - XHJY High Security Edition`} preset="sub" textCenter />
           {versionInfo.latestVersion && (
             <Text
               text={`Latest Version: ${versionInfo.latestVersion}`}

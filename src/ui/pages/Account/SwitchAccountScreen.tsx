@@ -15,7 +15,6 @@ import {
   CopyOutlined,
   EditOutlined,
   EllipsisOutlined,
-  KeyOutlined,
   PlusCircleOutlined
 } from '@ant-design/icons';
 
@@ -120,13 +119,6 @@ export function MyItem({ account, autoNav }: MyItemProps, ref) {
               }}>
               <CopyOutlined />
               <Text text="Copy address" size="sm" />
-            </Row>
-            <Row
-              onClick={() => {
-                navigate('ExportPrivateKeyScreen', { account });
-              }}>
-              <KeyOutlined />
-              <Text text="Export Private Key" size="sm" />
             </Row>
           </Column>
         )}

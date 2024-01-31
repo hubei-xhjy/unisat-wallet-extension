@@ -1,7 +1,6 @@
 import VirtualList from 'rc-virtual-list';
 import { forwardRef, useMemo, useState } from 'react';
 
-import { KEYRING_TYPE } from '@/shared/constant';
 import { WalletKeyring } from '@/shared/types';
 import { Card, Column, Content, Header, Icon, Layout, Row, Text } from '@/ui/components';
 import { useTools } from '@/ui/components/ActionComponent';
@@ -16,7 +15,6 @@ import {
   CheckCircleFilled,
   DeleteOutlined,
   EditOutlined,
-  KeyOutlined,
   PlusCircleOutlined,
   SettingOutlined
 } from '@ant-design/icons';
@@ -131,24 +129,6 @@ export function MyItem({ keyring, autoNav }: MyItemProps, ref) {
                 <EditOutlined />
                 <Text text="Edit Name" size="sm" />
               </Row>
-
-              {keyring.type === KEYRING_TYPE.HdKeyring ? (
-                <Row
-                  onClick={() => {
-                    navigate('ExportMnemonicsScreen', { keyring });
-                  }}>
-                  <KeyOutlined />
-                  <Text text="Show Secret Recovery Phrase" size="sm" />
-                </Row>
-              ) : (
-                <Row
-                  onClick={() => {
-                    navigate('ExportPrivateKeyScreen', { account: keyring.accounts[0] });
-                  }}>
-                  <KeyOutlined />
-                  <Text text="Export Private Key" size="sm" />
-                </Row>
-              )}
               <Row
                 onClick={() => {
                   if (keyrings.length == 1) {

@@ -40,8 +40,6 @@ import AddressTypeScreen from './Settings/AddressTypeScreen';
 import ChangePasswordScreen from './Settings/ChangePasswordScreen';
 import EditAccountNameScreen from './Settings/EditAccountNameScreen';
 import EditWalletNameScreen from './Settings/EditWalletNameScreen';
-import ExportMnemonicsScreen from './Settings/ExportMnemonicsScreen';
-import ExportPrivateKeyScreen from './Settings/ExportPrivateKeyScreen';
 import NetworkTypeScreen from './Settings/NetworkTypeScreen';
 import UpgradeNoticeScreen from './Settings/UpgradeNoticeScreen';
 import TestScreen from './Test/TestScreen';
@@ -158,14 +156,6 @@ const routes = {
   ChangePasswordScreen: {
     path: '/settings/password',
     element: <ChangePasswordScreen />
-  },
-  ExportMnemonicsScreen: {
-    path: '/settings/export-mnemonics',
-    element: <ExportMnemonicsScreen />
-  },
-  ExportPrivateKeyScreen: {
-    path: '/settings/export-privatekey',
-    element: <ExportPrivateKeyScreen />
   },
   HistoryScreen: {
     path: '/wallet/history',
